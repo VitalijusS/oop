@@ -69,21 +69,21 @@ export class Car {
     fuelLeft() {
         return `There is ${this.fuel} leters of fuel left and you can drive about ${Math.round(this.fuel / this.fuelConsumption * 100)} km.`;
     }
-    addFuel(leters) {
+    addFuel(liters) {
         if (this.isOn) {
             return 'Need to turn off the engine first!'
-        } else if (!Number.isFinite(leters)) {
+        } else if (!Number.isFinite(liters)) {
             return 'This is not fuel!'
-        } else if (leters < 0) {
+        } else if (liters < 0) {
             return 'Call 911 someone is trying to steal my fuel!';
-        } else if (leters === 0) {
+        } else if (liters === 0) {
             return 'Fuel is too expensive 😢 will have to walk';
-        } else if (this.fuel + leters > this.tankSize) {
-            const extra = (this.fuel + leters - this.tankSize).toFixed(1);
+        } else if (this.fuel + liters > this.tankSize) {
+            const extra = (this.fuel + liters - this.tankSize).toFixed(1);
             this.fuel = this.tankSize;
-            return `You spilled ${extra} leters of fuel on the floor because your tank is full`;
+            return `You spilled ${extra} liters of fuel on the floor because your tank is full`;
         }
-        this.fuel += leters;
-        return `Now you have ${this.fuel} leters of fuel left.`
+        this.fuel += liters;
+        return `Now you have ${this.fuel} liters of fuel left.`
     }
 }

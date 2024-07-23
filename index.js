@@ -1,24 +1,5 @@
 import { Dog } from './js/Dog.js';
-import { Car } from './js/Cars.js';
-const rex = new Dog("Rex", 'black', 10);
-console.log(rex);
-
-const bris = new Dog("Bris", 'white', 32);
-console.log(bris);
-
-console.log(rex.age);
-console.log(rex.hi());
-rex.think();
-console.log(rex.addNumbers(5, 5));
-console.log(rex.manyBones(12))
-
-rex.legCount = 5;
-rex.lostLeg();
-console.log(rex);
-console.log(rex.birthday());
-console.clear();
-
-
+import { Car } from './js/Car.js';
 // class -> Car(Automobilis)
 
 // Savybės:
@@ -92,3 +73,28 @@ console.log(audi80.startDriving(10));
 // console.log(audi80.turnOn());
 // console.log(audi80);
 
+
+
+
+
+
+
+
+
+const rex = new Dog("Rex", 'black', 10);
+console.log(rex);
+
+const bris = new Dog("Bris", 'white', 32);
+console.log(bris);
+
+console.log(rex.age);
+console.log(rex.hi());
+rex.think();
+console.log(rex.addNumbers(5, 5));
+console.log(rex.manyBones(12))
+
+rex.legCount = 5;
+rex.lostLeg();
+console.log(rex);
+console.log(rex.birthday());
+console.clear();
